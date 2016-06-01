@@ -2,6 +2,7 @@
   position: fixed;top: 0;
   left: 0;right: 0;
   background: linear-gradient(rgba(15, 47, 80, 0.86),rgba(22, 184, 206, 0.7));text-align: center;
+  font-family: 'Josefin Slab', serif;
 }
 .header-items img {height: 48px;padding: 10px;}
 
@@ -53,8 +54,8 @@ ion-side-menu .list {
   background: linear-gradient(rgba(5, 16, 41, 0.89),rgba(13, 19, 29, 0.86));
   position: absolute;
   top: 0;
-  /*left: 0;*/
-  left: -168px;
+  left: 0;
+  /*left: -168px;*/
   height: 100vh;
 }
 .left-menu #user-pp {position: relative;left: 10px;}
@@ -62,8 +63,8 @@ ion-side-menu .list {
   background: linear-gradient(rgba(5, 16, 41, 0.89),rgba(13, 19, 29, 0.86));
   position: absolute;
   top: 0;
-  /*right: 0;*/
-  right: -110px;
+  right: 0;
+  /*right: -110px;*/
   height: 100vh;
 }
 .list {list-style-type: none;padding-top: 48px;}
@@ -71,6 +72,13 @@ ion-side-menu .list {
   display: block;
   margin: 2px 0;
   padding: 10px;
+  font-family: 'Josefin Slab', serif;
+}
+.list .item:hover {
+  background-color: aqua;
+  font-weight: bold;
+  transition: background ease 1s;
+  -webkit-transition: background ease 1s;
 }
 .list .item a {text-decoration: none;color: #fff;}
 #right-menu li {

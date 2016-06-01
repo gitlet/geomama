@@ -1,0 +1,43 @@
+/* Empty. Add your own CSS if you like */
+ion-pane {
+  background: linear-gradient(rgba(18, 77, 138, 0.95),rgba(14, 199, 190, 0.88));
+  text-align: center;
+  height: 100vh;
+  /*background-attachment: fixed;*/
+}
+
+ion-pane img {
+  height: 44px;
+  position: relative;
+  top: 140px;
+  left: 0;
+  right: 0;
+}
+ion-pane .login {
+  /*text-align: center;*/
+  position: absolute;
+  top: 192px;
+  left: 0;
+  right: 0;
+  /*border: 1px solid;*/
+}
+ion-pane .login label {
+  position: relative;
+  /* text-align: center; */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+ion-pane .login label input {
+  margin: 2px auto 0;
+  border-radius: 4px;
+  padding: 4px;
+}
+ion-pane .login #login-btn {
+  background: none;
+  border: 2px solid #fff;
+  font-weight: bold;
+  color: white;
+  padding: 5px 67px;
+  margin-top: 10px;
+}

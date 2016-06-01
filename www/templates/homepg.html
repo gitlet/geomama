@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Home page</title>
+    <link rel="stylesheet" href="../css/font-awesome-4.6.2/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/homepg.css">
+
+    <!-- using mapstrsaction -->
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+   	<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+
+    <!-- jquery online -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/localjquery.js"></script>
+  </head>
+  <body>
+    <ion-header-bar>
+      <div class="header-items">
+        <a href="homepg.html">
+          <img src="../img/geo-track-solution.png" alt="geomama_logo" />
+        </a>
+      </div>
+    </ion-header-bar>
+
+    <!-- view for map to display -->
+    <!-- <div id="map"></div> -->
+    <!-- <script type="text/javascript">
+		  var map = new mxn.Mapstraction('map', 'openlayers');
+		  var latlon = new mxn.LatLonPoint(25.2048, 55.2708);
+
+		  map.setCenterAndZoom(latlon, 10);
+	  </script> -->
+
+    <ion-side-menus enable-menu-with-back-views="true">
+
+      <!-- view for map to display -->
+      <div id="map"></div>
+      <script type="text/javascript">
+  		  var map = new mxn.Mapstraction('map', 'openlayers');
+  		  var latlon = new mxn.LatLonPoint(25.2048, 55.2708);
+
+  		  map.setCenterAndZoom(latlon, 10);
+  	  </script>
+
+            <!-- nav buttons -->
+      <ion-nav-buttons side="left">
+        <!-- Toggle left side menu -->
+        <button menu-toggle="left" class="button button-icon icon ion-navicon" id="left-btn">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <!-- Toggle right side menu -->
+        <button menu-toggle="right" class="button button-icon icon ion-navicon" id="right-btn">
+          <i class="fa fa-taxi" aria-hidden="true"></i>
+        </button>
+      </ion-nav-buttons>
+      <!-- nav buttons end -->
+
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+        <ul class="list left-menu" id="left-menu">
+          <li>
+            <div id="user-pp">
+              <img src="" alt="profile" />
+            </div>
+          </li>
+          <li class="item">
+            <a href="templates/homepg.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;MAP
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <i class="fa fa-flag-o" aria-hidden="true"></i>&nbsp;REPORT
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <i class="fa fa-users" aria-hidden="true"></i>&nbsp;MANAGEMENT
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <i class="fa fa-search" aria-hidden="true"></i>&nbsp;SEARCH
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;SETTINGS
+            </a>
+          </li>
+        </ul>
+      </ion-side-menu>
+
+      <!-- Main content, usually <ion-nav-view> -->
+      <ion-side-menu-content edge-drag-threshold="true" drag-content="true">
+        <ion-list ng-controller="ListCtrl">
+          <ion-item ng-repeat="item in items" class="item-thumbnail-left">
+            <img ng-src="{{item.img}}">
+
+            <!-- <ul class="list">
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+              <li class="item"><a href="#"><img src="../img/green.svg" alt="" /></a></li>
+            </ul> -->
+          </ion-item>
+        </ion-list>
+      </ion-side-menu-content>
+
+      <!-- Right menu -->
+      <ion-side-menu side="right">
+        <ul class="list right-menu" id="right-menu">
+          <li class="item"><a href="">ALL</a></li>
+          <li class="item"><a href="">LIST</a></li>
+        </ul>
+      </ion-side-menu>
+    </ion-side-menus>
+  </body>
+</html>

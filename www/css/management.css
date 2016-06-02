@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(rgba(50, 95, 162, 0.92),rgba(39, 127, 189, 0.85));
+}
+.list .item img {
+  height: 40px;width: 40px;
+}
+.list {list-style-type: none;}
+.list .item {
+  /*float: left;*/
+  display: inline-block;
+  margin: 5px;
+  padding: 20px;
+  /* border: 1px solid; */
+  border-radius: 14px;
+  text-align: center;
+  background: linear-gradient(rgba(22, 43, 90, 0.82),rgba(47, 141, 208, 0.82));
+  box-shadow: 0px 0px 40px rgba(20, 47, 74, 0.85);
+}
+.list .item a {
+  text-decoration: none;
+  color: aliceblue;
+  box-shadow: 0px 10px 10px rgba(34, 69, 132, 0.63);
+}

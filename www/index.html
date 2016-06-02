@@ -34,40 +34,33 @@
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
    	<script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
 
+    <!-- php script for auth -->
+    <!-- <script src="js/auth.php"></script> -->
     <!-- jquery online -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     </script>
     <scrpt src="js/localjquery.js"></scrpt>
   </head>
-  <body ng-app="geomamaApp">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
-    <!-- <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar> -->
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
-    <!-- <ion-nav-view>
-    </ion-nav-view> -->
-    <ion-pane>
-      <img src="img/geo-track-solution.png" alt="geomama_logo">
-      <form class="login" action="index.html" method="post">
-        <label for="username">
-          <input type="text" name="name" value="" id="username" placeholder="Username">
-        </label>
-        <label for="password">
-          <input type="password" name="name" value="" id="password" placeholder="Password">
-        </label>
-        <label for="login-btn">
-          <input type="button" name="name" value="Login" id="login-btn">
-        </label>
-      </form>
-    </ion-pane>
+  <body ng-app="geomamaApp" ng-controller="indexCtrl">
+
+    <ion-view view-title="Login">
+      <ion-content class="padding">
+        <a href="index.html">
+          <img src="img/geo-track-solution.png" alt="geomama_logo">
+        </a>
+        <form class="login" action="auth.php" method="post">
+          <label for="username">
+            <input type="text" name="name" value="" id="username" placeholder="Username">
+          </label>
+          <label for="password">
+            <input type="password" name="name" value="" id="password" placeholder="Password">
+          </label>
+          <label for="login-btn">
+            <input type="button" name="name" value="Login" id="login-btn">
+          </label>
+        </form>
+      </ion-content>
+    </ion-view>
   </body>
 </html>
